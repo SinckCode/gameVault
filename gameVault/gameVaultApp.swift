@@ -12,6 +12,7 @@ struct gameVaultApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            Vista4()
         }
     }
 }
