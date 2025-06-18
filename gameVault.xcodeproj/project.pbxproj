@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9B3BB1D92DFEC39E0071B7B5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3BB1D82DFEC39B0071B7B5 /* Models.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9B7C3BC12DF3D3AD0001EAEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B3BB1D82DFEC39B0071B7B5 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9B7C3BB22DF3D3AB0001EAEA /* gameVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7C3BC02DF3D3AD0001EAEA /* gameVaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7C3BCA2DF3D3AD0001EAEA /* gameVaultUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameVaultUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		9B7C3BA92DF3D3AB0001EAEA = {
 			isa = PBXGroup;
 			children = (
+				9B3BB1D82DFEC39B0071B7B5 /* Models.swift */,
 				9B7C3BB42DF3D3AB0001EAEA /* gameVault */,
 				9B7C3BC32DF3D3AD0001EAEA /* gameVaultTests */,
 				9B7C3BCD2DF3D3AD0001EAEA /* gameVaultUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3BB1D92DFEC39E0071B7B5 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
