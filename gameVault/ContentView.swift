@@ -1,68 +1,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 0
+
     var body: some View {
         ZStack(alignment: .bottom) {
+            Color.black.ignoresSafeArea()
+
             VStack(spacing: 0) {
-                
-                // Barra superior
+                // Título alineado a la izquierda
                 HStack {
-                    Text("Game Vault")
-                        .font(.title2)
+                    Text("GameVault")
+                        .font(.largeTitle)
                         .fontWeight(.bold)
-                    
+                        .foregroundColor(.white)
+                        .padding(.top, 30)
+                        .padding(.horizontal)
                     Spacer()
-                    
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(.blue)
                 }
-                .padding()
-                
-                
-                
-                // Barra inferior fija
-                TabBarView()
-                    .padding(.horizontal)
-                    .padding(.bottom, 10)
+
+                // Vista principal según pestaña
+                Group {
+                    switch selectedTab {
+                    case 0:
+                        HomeView()
+                    case 1:
+                        SearchView()
+                    case 2:
+                        FavoritesView()
+                    default:
+                        HomeView()
+                    }
+                }
+                .padding(.bottom, 60) // ← espacio para la barra inferior
+
+                Spacer(minLength: 0)
             }
+
+            // Barra inferior flotante
+            TabBarView(selectedTab: $selectedTab)
+                .padding(.horizontal)
+                .padding(.bottom, 10)
         }
     }
-}
-
-
-
-struct TabBarView: View {
-    var body: some View {
-        HStack {
-            Spacer()
-            VStack {
-                Image(systemName: "house.fill")
-                Text("Inicio")
-                    .font(.caption)
-            }
-            Spacer()
-            VStack {
-                Image(systemName: "magnifyingglass")
-                Text("Buscar")
-                    .font(.caption)
-            }
-            Spacer()
-            VStack {
-                Image(systemName: "star.fill")
-                Text("Favoritos")
-                    .font(.caption)
-            }
-            Spacer()
-        }
-        .padding()
-        .background(Color.blue.opacity(0.95))
-        .foregroundColor(.white)
-        .cornerRadius(15)
-    }
-}
-
-#Preview {
-    ContentView()
 }
